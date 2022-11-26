@@ -1,0 +1,2 @@
+<!--pages/calling/calling.wxml-->
+<TUICallKit class="calling" id="TUICallKit" config="{{config}}" bind:callEnd="callEnd"  bind:sendMessage="sendMessage"></TUICallKit>

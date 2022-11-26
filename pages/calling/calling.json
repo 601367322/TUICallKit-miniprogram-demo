@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "TUICallKit": "/components/TUICallKit/TUICallKit/TUICallKit"
+  }
+}
