@@ -1,5 +1,5 @@
 ## 全局监听的实现逻辑请参考
-[https://blog.csdn.net/BingShuShu/article/details/128050723?spm=1001.2014.3001.5502](https://blog.csdn.net/BingShuShu/article/details/128050723?spm=1001.2014.3001.5502)
+[TUICallKit小程序全局监听实践](https://blog.csdn.net/BingShuShu/article/details/128050723?spm=1001.2014.3001.5502)
 
 ## 关于腾讯云即时通信 IM
 
