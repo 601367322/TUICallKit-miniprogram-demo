@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/message/index"
+    "pages/message/index",
+    "pages/calling/calling"
   ],
   "tabBar": {
     "custom": false,
@@ -31,5 +32,6 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2"
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
