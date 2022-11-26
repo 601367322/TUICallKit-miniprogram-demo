@@ -1,3 +1,6 @@
+## 全局监听的实现逻辑请参考
+[https://blog.csdn.net/BingShuShu/article/details/128050723?spm=1001.2014.3001.5502](https://blog.csdn.net/BingShuShu/article/details/128050723?spm=1001.2014.3001.5502)
+
 ## 关于腾讯云即时通信 IM
 
 腾讯云即时通信（Instant Messaging，IM）基于 QQ 底层 IM 能力开发，仅需植入 SDK 即可轻松集成聊天、会话、群组、资料管理能力，帮助您实现文字、图片、短语音、短视频等富媒体消息收发，全面满足通信需要。
