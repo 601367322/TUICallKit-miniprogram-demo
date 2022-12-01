@@ -5,11 +5,11 @@ var AppTUICallKitDelegate = {
   TYPE_INVITE: "invite",
   TYPE_CALL: "call",
 
-  init() {
+  init({tim,sdkAppId,userId,userSig}) {
     //创建TUICallEngine
     wx.$TUICallEngine = TUICallEngine.createInstance({
-      tim: wx.$TUIKit,
-      sdkAppID: wx.$chat_SDKAppID,
+      tim: tim,
+      sdkAppID: sdkAppId,
     });
 
     //添加INVITED监听
@@ -17,8 +17,8 @@ var AppTUICallKitDelegate = {
 
     //初始化TUICallEngine
     wx.$TUICallEngine.init({
-      userID: wx.$chat_userID,
-      userSig: wx.$chat_userSig,
+      userID: userId,
+      userSig: userSig,
     })
   },
 

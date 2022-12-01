@@ -1,5 +1,4 @@
-import appTuicallkitDelegate from '../../app-tuicallkit-delegate';
-const app = getApp();
+import AppTuicallkitDelegate from '../../app-tuicallkit-delegate';
 
 Page({
   data: {
@@ -60,6 +59,6 @@ Page({
   },
 
   handleCall(event) {
-    appTuicallkitDelegate.handleNewCall(event);
+    AppTuicallkitDelegate.handleNewCall(event);
   }
 })

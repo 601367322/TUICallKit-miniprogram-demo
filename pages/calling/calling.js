@@ -1,4 +1,4 @@
-import appTuicallkitDelegate from '../../app-tuicallkit-delegate';
+import AppTuicallkitDelegate from '../../app-tuicallkit-delegate';
 
 // pages/calling/calling.js
 Page({
@@ -68,7 +68,7 @@ Page({
         }
 
         setTimeout(() => {
-          appTuicallkitDelegate.addTUICallEngineEvent();
+          AppTuicallkitDelegate.addTUICallEngineEvent();
         }, 1);
     },
 
