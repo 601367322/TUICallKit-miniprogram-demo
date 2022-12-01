@@ -1,3 +1,4 @@
+import AppTUICallKitDelegate from '../../../app-tuicallkit-delegate.js';
 import TUICallEngine, { EVENT, MEDIA_TYPE, AUDIO_PLAYBACK_DEVICE, STATUS } from '../TUICallEngine/tuicall-engine-wx.js';
 
 // 组件旨在跨终端维护一个通话状态管理机，以事件发布机制驱动上层进行管理，并通过API调用进行状态变更。
@@ -621,13 +622,21 @@ Component({
       return wx.$TUICallEngine.getTim();
     },
     // 初始化TRTCCalling
-    async init(value) {
+    async init({type,event}) {
       this._addTSignalingEvent();
       // const res = await wx.$TUICallEngine.init({
       //   userID: this.data.config.userID,
       //   userSig: this.data.config.userSig,
       // });
-      this.handleNewInvitationReceived(value)
+      if(type == AppTUICallKitDelegate.TYPE_INVITE){
+        this.handleNewInvitationReceived(event)
+      }else if(type==AppTUICallKitDelegate.TYPE_CALL){
+          if (event.detail.groupID) {
+              this.groupCall(event.detail);
+          } else {
+              this.call(event.detail);
+          }
+      }
       return 0;
     },
     // 销毁 TUICallEngine

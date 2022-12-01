@@ -1,3 +1,5 @@
+import appTuicallkitDelegate from '../../app-tuicallkit-delegate';
+
 // pages/calling/calling.js
 Page({
 
@@ -33,7 +35,7 @@ Page({
         }, async () => {
             //初始化TUICallKit
             this.TUICallKit = this.selectComponent('#TUICallKit');
-            this.TUICallKit.init(JSON.parse(option.value));
+            this.TUICallKit.init({type:option.type,event:JSON.parse(option.event)});
         });
     },
     /**
@@ -66,8 +68,7 @@ Page({
         }
 
         setTimeout(() => {
-            var app = getApp();
-            app.addTUICallEngineEvent();
+          appTuicallkitDelegate.addTUICallEngineEvent();
         }, 1);
     },
 
@@ -99,11 +100,4 @@ Page({
         wx.navigateBack();
     },
 
-    handleCall(event) {
-        if (event.detail.groupID) {
-            this.TUICallKit.groupCall(event.detail);
-        } else {
-            this.TUICallKit.call(event.detail);
-        }
-    },
 })

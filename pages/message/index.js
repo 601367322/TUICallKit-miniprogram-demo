@@ -1,3 +1,4 @@
+import appTuicallkitDelegate from '../../app-tuicallkit-delegate';
 const app = getApp();
 
 Page({
@@ -56,5 +57,9 @@ Page({
   
   sendMessage(event) {
     this.selectComponent('#TUIChat').sendMessage(event);
+  },
+
+  handleCall(event) {
+    appTuicallkitDelegate.handleNewCall(event);
   }
 })
